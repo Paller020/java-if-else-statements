@@ -189,17 +189,50 @@ public class IfElseStatements {
           }
     
     public static void question9(){
-       System.out.println("How much do you get paid? ");
+    System.out.println("How much do you get paid per hour? ");
        int value9 = kb.nextInt(); 
-       System.out.println("How many hours do you work");
+       System.out.println("How many hours do you work per week? ");
        int hour1 = kb.nextInt();
-        
-        
-        
-    }
+       int gross = value9 * hour1;
+      
+         if(hour1 > 40)
+       {
+           hour1 = (40 * value9) + (value9/2) *15; 
+           System.out.println("You get paid: " +hour1);
+       }
+        else
+       {
+           System.out.println("You get paid: "+ gross);
+       }
+     }
     
     public static void question10(){
+     System.out.println("How much do you get paid per hour? ");
+     int value10 = kb.nextInt();
+     System.out.println("How many hours do you work per week? ");
+     int hour2 = kb.nextInt(); 
+     int gross2 = value10 * hour2;
         
-    }
+        if(hour2 <= 40 )
+        {
+            System.out.println("You will get paid: "+ gross2 ); 
+        }
+        
+        else if(hour2 >= 60)
+        {
+            System.out.println("Please see manager. ");
+        }
+        
+        else if(hour2 > 40)
+        {
+            hour2 = (40 * value10) + (value10/2) *15;
+            System.out.println("You will get paid: " + hour2);
+        }
+           
+        
+        
+        
+   
+}
     
 }
